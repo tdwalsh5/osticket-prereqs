@@ -33,14 +33,12 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <br />
 
-
 <p>
 2.) Once you have created your virtual machine you will want to connect to it by using the public IP address of the VM. You will connect using the remote desktop protocol connection app (Windows App on Mac).
 </p>
 <p>
 <img src="install-shot1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-
 
 <p>
 3.) Now connected to your VM, you will want to go to your control panel. From the control panel open up programs. Select, Turn Windows features on and off.
@@ -53,15 +51,19 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <br />
 
-
 <p>
-4.) Now you want to install / enable IIS in Windows with CGI and Common HTTP features.
-  World Wide Web Services -> Application Development Features -> [X]CGI[X] Common HTTP Features
-  <p>
+  4.) Now install and enable <strong>IIS</strong> in Windows with <strong>CGI</strong> and <strong>Common HTTP Features</strong>.<br><br>
+
+  Navigate to:<br>
+  <strong>World Wide Web Services → Application Development Features</strong><br>
+  Then check:<br>
+  <strong>[✔] CGI</strong><br>
+  <strong>[✔] Common HTTP Features</strong>
+</p>
 <img src="install-image4.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
-To make sure the IIS is installed/enabled go to a browser and search 127.0.0.1 (loopback). It should look something like this. (Image 5)
+To make sure the IIS is installed/enabled go to a browser and search 127.0.0.1 (loopback). It should look something like this.
 </p>
   <p>
 <img src="install-image5.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -96,12 +98,10 @@ To make sure the IIS is installed/enabled go to a browser and search 127.0.0.1 (
 <p>
 10.) Download and install MySQL 5.5.62 (mysql-5.5.62-win32.msi) Run the setup wizard: Typical Setup -> Launch Configuration Wizard (after install) -> Standard Configuration 
 Make the new root password: root
-  (Image 6)
   <p>
 <img src="install-image6.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 Execute the process on the next page.
-(Image 7)
   <p>
 <img src="install-image7.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -112,14 +112,12 @@ Execute the process on the next page.
 11.) Now that the files are downloaded and installed, search for IIS in the windows search bar. Open IIS as an administrator. The program should like this.
 </p>
 <p>
-  image 8
 <img src="install-image8.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
 
 <p>
 12.) Register PHP from within IIS. Click on PHP Manager.
-(image 9)
 <p>
 <img src="install-image9.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
@@ -130,12 +128,10 @@ Execute the process on the next page.
 <img src="install-image10.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 Provide a new path to the PHP executable file (php-cgi.exe). C Drive -> PHP -> php-cgi file.
-(image 11)
 <p>
 <img src="install-image11.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 Restart the IIS server.
-(image 12)
 </p>
 <p>
 <img src="install-image12.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -159,22 +155,21 @@ Reload IIS again.
   Enable extensions on the osTicket browser. Navigate back to IIS, Sites -> Default -> osTicket -> PHP manager -> "Enable or disble an extension"
 </p>
 <p>
-  image 14
-  <img src="install-image14" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="install-image14.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-  image 15
-  <img src="install-image15" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="install-image15.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
   <p>
-    Enable three extensions
-  1.) php_imap.dll
-  2.) php_intl.dll
-  3.) php_opcache.dll
-  </p>
+  Enable the following three PHP extensions:
+</p>
+<ol>
+  <li><code>php_imap.dll</code></li>
+  <li><code>php_intl.dll</code></li>
+  <li><code>php_opcache.dll</code></li>
+</ol>
   <p>
-  image 16
-  <img src="install-image16" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="install-image16.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 15.) Once we have those extensions enabled in IIS, we are going to want to rename one of the files in our osTicket folder.
@@ -192,14 +187,14 @@ Reload IIS again.
   
 <p>
   image 17
-<img src="https://imgur.com/VPZvOdo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image17.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
 Select a principal
   
 <p>
-<img src="https://imgur.com/PoGk34d.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image18.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
@@ -207,21 +202,21 @@ Select a principal
  Type "Everyone" in the box.
   
 <p>
-<img src="https://imgur.com/F4H3ppM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image19.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
   Make sure Full Control and all the other boxes are checked.
   
 <p>
-<img src="https://imgur.com/rbbGqwB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image20.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
   Click Apply and Ok.
   
 <p>
-<img src="https://imgur.com/saRO3y5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image21.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
@@ -231,21 +226,21 @@ Select a principal
   We will want to download and install HeidiSQL from the Installation Files. 
   
 <p>
-<img src="https://imgur.com/i7a4gWC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image22.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
   When the program is open we will create a new session in it.
   
 <p>
-<img src="https://imgur.com/g5M1i61.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image23.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
-  We want to make sure the username is root and the password is Password1.
+  We want to make sure the username is root and the password is root.
   
 <p>
-<img src="https://imgur.com/LEAZNOc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image24.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
@@ -254,23 +249,7 @@ Select a principal
   We will now create a new database within HeidiSQL. In Heidi right click on the left side where is says "Unnamed", select "create new", and then select "database". Name the new database osTicket. Once we have the new database setup go back to the osTicket browser and under MySQL Database type in osTicket.
   
 <p>
-<img src="https://imgur.com/0rG1AJm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-  
-  The last step is to do some clean up. We will want to delete the setup folder in our system. 
-  -Delete: C:\inetpub\wwwroot\osTicket\setup
-  Only delete the setup folder and nothing else.
-  
-  We then will want to set the permissions back to "Read" only in the ost-config.php file.
-  
-<p>
-<img src="https://imgur.com/wFr0pkK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-  
-<p>
-<img src="https://imgur.com/jsJOPyn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="install-image25.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
   
