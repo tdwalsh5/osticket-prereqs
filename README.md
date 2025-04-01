@@ -186,7 +186,6 @@ Reload IIS again.
   Click Add
   
 <p>
-  image 17
 <img src="install-image17.PNG" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
